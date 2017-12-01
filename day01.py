@@ -3,9 +3,8 @@ def parse():
         return [int(c) for c in f.read().strip()]
 
 
-def rotatesum(l, step):
-    r = l[-step:] + l[:-step]
-    return sum(x for (x, y) in zip(l, r) if x == y)
+def rotatesum(l, s):
+    return sum(x for x, y in zip(l, l[-s:] + l[:-s]) if x == y)
 
 
 l = parse()
