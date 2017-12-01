@@ -4,7 +4,7 @@ def parse():
 
 
 def rotatesum(l, s):
-    return sum(x for x, y in zip(l, l[-s:] + l[:-s]) if x == y)
+    return sum(x for x, y in zip(l, l[s:] + l[:s]) if x == y)
 
 
 l = parse()
